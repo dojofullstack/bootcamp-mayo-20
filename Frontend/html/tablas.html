@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead {
+        background-color: #2d7d10;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/2.3.1/css/dataTables.dataTables.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="//cdn.datatables.net/2.3.1/js/dataTables.min.js"></script>
+  </head>
+  <body>
+    <h1>Aprende Tablas</h1>
+
+    <table border="3" cellspacing="5px" cellpadding="8px" id="myTableDojo">
+      <thead>
+        <th>NOmbre</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Foto</th>
+        <th>Acciones</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Juan Perez</td>
+          <td>123456789</td>
+          <td>Calle Falsa 123</td>
+          <td>
+            <img
+              height="120px"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyD8hdqhtHGf69dc6WiMSGMWQnJUb_Fazt3Q&s"
+              alt="Foto de Juan Perez"
+            />
+          </td>
+          <td>
+            <button>Eliminar Contacto</button>
+            <button>Editar Contacto</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Maria Lopez</td>
+          <td>987654321</td>
+          <td>Avenida Siempre Viva 456</td>
+           <td>
+            <img
+              height="120px"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyD8hdqhtHGf69dc6WiMSGMWQnJUb_Fazt3Q&s"
+              alt="Foto de Juan Perez"
+            />
+          </td>
+          <td>
+            <button>Eliminar Contacto</button>
+            <button>Editar Contacto</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Carlos Sanchez</td>
+          <td>555555555</td>
+          <td>Plaza Mayor 789</td>
+           <td>
+            <img
+              height="120px"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyD8hdqhtHGf69dc6WiMSGMWQnJUb_Fazt3Q&s"
+              alt="Foto de Juan Perez"
+            />
+          </td>
+          <td>
+            <button>Eliminar Contacto</button>
+            <button>Editar Contacto</button>
+          </td>
+        </tr>
+
+        <!-- genera mas registros -->
+        <tr>
+          <td>Laura Martinez</td>
+          <td>444444444</td>
+          <td>Calle del Sol 101</td>
+           <td>
+            <img
+              height="120px"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyD8hdqhtHGf69dc6WiMSGMWQnJUb_Fazt3Q&s"
+              alt="Foto de Juan Perez"
+            />
+          </td>
+          <td>
+            <button>Eliminar Contacto</button>
+            <button>Editar Contacto</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Pedro Gomez</td>
+          <td>333333333</td>
+          <td>Avenida del Mar 202</td>
+        </tr>
+        <tr>
+          <td>Lucia Fernandez</td>
+          <td>222222222</td>
+          <td>Calle de la Luna 303</td>
+        </tr>
+        <tr>
+          <td>Laura Martinez</td>
+          <td>444444444</td>
+          <td>Calle del Sol 101</td>
+        </tr>
+        <tr>
+          <td>Pedro Gomez</td>
+          <td>333333333</td>
+          <td>Avenida del Mar 202</td>
+        </tr>
+        <tr>
+          <td>Lucia Fernandez</td>
+          <td>222222222</td>
+          <td>Calle de la Luna 303</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>Total de registros: 3</td>
+          <!-- input buscados de elementos -->
+          <td colspan="3">
+            <input type="text" placeholder="Buscar contactos" />
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <script>
+      let table = new DataTable("#myTableDojo");
+    </script>
+  </body>
+</html>
