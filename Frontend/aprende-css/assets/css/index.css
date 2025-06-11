@@ -1,11 +1,17 @@
 
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
 
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    }
+}
+
 
 h1, h2, h3 {
     color: hsl(0, 0%, 20%);
@@ -20,14 +26,7 @@ a {
     text-decoration: none;
 }   
 
-button {
-    background-color: purple;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+
 
 button:hover {
     background-color: #2980b9;
@@ -36,4 +35,104 @@ button:hover {
     width: 80%;
     margin: auto;
     overflow: hidden;
+}
+
+
+#container {
+    background-color: #3498db;
+    /* padding: 10px; */
+    /* padding-left: 35px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px; */
+    padding: 20px 5px;
+    margin: 20px 30px;
+    border: 3px solid #c6df0aa2 ;
+    width: 300px;
+    height: 90px;
+    /* box-sizing: content-box; */
+    /* border-bottom: 5px solid #c6df0aa2; */
+}
+
+
+#hola-mundo {
+    background-color: #c6df0aa2;
+    padding: 10px;
+    margin: 20px 30px;
+    border: 3px solid #3498db;
+    width: 300px;
+    height: 90px;
+    /* box-sizing: content-box; */
+}
+
+button {
+    background-color: purple;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-payment {
+    background-color: #3498db;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-payment.bg-primary {
+    background-color: orange;
+
+}
+
+
+.bg-primary {
+    background-color: #091c84;
+}
+
+
+
+button, .btn-payment {
+    color: white;
+    padding: 10px 15px;
+
+}
+
+
+li {
+    list-style-type: number;
+    padding: 5px 0;
+    color: #091c84;
+}
+
+li.frutas {
+    color: #3498db;
+    font-style: italic;
+    background-color: aquamarine;
+}
+
+
+li.verduras {
+    color: green;
+    font-style: italic;
+    background-color: rgb(73, 173, 91);
+}
+
+
+
+
+/* body > button.btn-payment.bg-primary {
+    background-color: #28c61a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+
+
+ul.menu li {
+    display: inline-block;
+    margin: 5px 10px;
+    /* // aplicar underlaine; */
+    text-decoration: underline;
 }
