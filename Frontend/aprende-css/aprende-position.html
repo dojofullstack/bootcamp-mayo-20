@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .btn-buy {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative; /* Posicionamiento relativo */
+            bottom: 30px;
+            z-index: 9999;
+        }
+
+        .btn-add-to-cart {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative; /* Posicionamiento relativo */
+            top: 10px; /* 20 píxeles desde la parte superior del contenedor */
+            left: 20px; /* 20 píxeles desde la izquierda del contenedor */
+        }
+
+        .container-banner {
+            position: relative; /* Contenedor con posicionamiento relativo */
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .banner {
+            width: 100%;
+            position: absolute;
+        }
+
+        .btn-banner {
+            position: absolute; /* Posicionamiento absoluto */
+            bottom: 50%; /* 20 píxeles desde la parte inferior del contenedor */
+            left: 50%; /* Centrado horizontalmente */
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transform: translateX(-50%); /* Centrado horizontal */
+        }   
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <main>
+
+        <section class="container-banner">
+            <img class="banner"  width="100%" src="https://c.static-nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/tpqid8vgfey6m4ke86te/nike-joyride.jpg" alt="">
+            <button class="btn-banner">Comprar Ofertas</button>
+        </section>
+
+    </main>
+
+    <h1>CSS Position</h1>
+
+    <p>La propiedad <code>position</code> en CSS se utiliza para especificar el método de posicionamiento de un elemento en la página. Los valores más comunes son:</p>
+    <ul>
+        <li><code>static</code>: Posicionamiento normal, el elemento se coloca en el flujo del documento.</li>
+        <li><code>relative</code>: El elemento se posiciona relativo a su posición original.</li>
+        <li><code>absolute</code>: El elemento se posiciona relativo al primer ancestro posicionado (no estático).</li>
+        <li><code>fixed</code>: El elemento se posiciona relativo a la ventana del navegador y no se desplaza al hacer scroll.</li>
+    </ul>
+
+
+    <button class="btn-buy">
+        Comprar
+    </button>
+    <button class="btn-add-to-cart">
+        Agregar al carrito
+    </button>
+</body>
+</html>

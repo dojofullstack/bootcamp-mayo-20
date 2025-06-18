@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --border-color: #ccc;
+    --dojofullstack: rgba(167, 6, 167, 0.52);
+    --henry-fm: 'Arial Henry', sans-serif
+}
+
+
+
+        .btn-login:active {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;    
+        }
+
+        .input-search:focus {
+            background-color: lightblue;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;    
+        }
+
+        .game:first-child {
+            font-weight: bold;
+            color: green;
+            background-color: lightgreen;
+        }
+
+        .game:last-child {
+            font-weight: bold;
+            color: pink;
+            background-color: lightpink;
+        }
+
+        .game:nth-child(3) {
+            font-weight: bold;
+            color: blue;
+            background-color: lightblue;
+        }
+
+
+        .btn-login {
+            background-color: var(--secondary-color);
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <main>
+
+
+        <button class="btn-login">
+            INiciar sesion
+        </button>
+
+
+        <button class="btn-register" >Crear cuenta</button>
+
+        <input type="text" placeholder="Buscar..." class="input-search">
+
+        <h5>
+                        <span>Juegos</span>
+        </h5>
+        <ul>
+            <li class="game">
+                <a href="#">The Legend of Zelda: Tears of the Kingdom</a>
+            </li>
+            <li class="game">
+                <a href="#">Final Fantasy XVI</a>
+            </li>
+            <li class="game">
+                <a href="#">Starfield</a>
+            </li>
+            <li class="game">
+                <a href="#">
+                    Baldur's Gate 3
+                </a>
+            </li>
+       
+        </ul>
+
+    </main>
+    
+</body>
+</html>
