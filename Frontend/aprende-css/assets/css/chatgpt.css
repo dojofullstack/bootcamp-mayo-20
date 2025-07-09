@@ -1,6 +1,6 @@
 
 
-body {
+    body {
     background-color: rgb(42, 40, 40);
     color: white;
 }
@@ -40,7 +40,7 @@ body {
 
 .icons-chat {
     margin-top: 10px;
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -49,4 +49,53 @@ body {
 .icons-chat-right {
     display: flex;
     gap: 10px;
+}
+
+
+
+
+@media (min-width: 700px) and (max-width: 900px) {
+
+    #title-chat {
+        font-size: 30px;
+        color: yellow;
+        font-style: italic;
+    }
+
+}
+
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    #title-chat {
+        font-size: 30px;
+        color: yellow;
+        font-style: italic;
+    }
+
+}
+
+
+/* // este media query es para pantallas pequeñas, como móviles */
+@media (max-width: 500px) {
+
+    #title-chat {
+        font-size: 18px;
+        color: orange;
+        font-style: normal;
+    }
+
+}
+
+
+
+/* // este media query es para pantallas pequeñas, como móviles */
+@media (min-width: 1200px) {
+
+    #title-chat {
+        font-size: 40px;
+        color: palevioletred;
+        font-style: italic;
+    }
+
 }
