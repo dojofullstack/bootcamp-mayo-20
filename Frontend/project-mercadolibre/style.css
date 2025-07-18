@@ -4,3 +4,12 @@
     width: 100%;
     height: 400px !important;
 }
+
+
+.banner-mercadolibre {
+    background-image: url('https://http2.mlstatic.com/D_NQ_803027-MLU74643615266_022024-OO.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+}
