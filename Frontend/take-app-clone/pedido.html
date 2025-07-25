@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Virtual TakeApp.com</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">TakeApp Clone</a>
+        </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                <span class="badge badge-sm indicator-item">8</span>
+              </div>
+            </div>
+            <div
+              tabindex="0"
+              class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow"
+            >
+              <div class="card-body">
+                <span class="text-lg font-bold">8 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="m-5 md:max-w-[700px] md:mx-auto">
+      <header>
+        <h2 class="text-xl text-gray">Checkout</h2>
+        <div class="flex justify-between">
+          <h1 class="text-xl font-bold">Bolsos Dojofullstack</h1>
+          <i class="bi bi-house-check text-2xl"></i>
+        </div>
+      </header>
+
+      <div id="formulario-cleinte" class="mt-3">
+        <fieldset
+          class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4"
+        >
+          <legend class="fieldset-legend">Cliente</legend>
+
+          <label class="label text-black text-md" for="">Nombre</label>
+          <input type="text" class="input" placeholder="Carlos M." />
+
+          <label class="label text-black text-md mt-3" for=""
+            >N. de Whatsapp</label
+          >
+
+          <div class="flex gap-3">
+            <select class="select select-success w-[90px]">
+              <option selected>+51</option>
+              <option>+52</option>
+              <option>+53</option>
+              <option>+54</option>
+            </select>
+            <input type="number" class="input" placeholder="51999999" />
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="product-resumen">
+        <div class="p-5 shadow-lg rounded-box bg-base-200 mt-5">
+          <h2 class="text-lg font-bold">Articulos</h2>
+
+          <ul>
+            <li>
+              <div class="card card-side bg-base-100 shadow-sm p-3">
+                <figure class="size-10 grow-2 h-[150px]">
+                  <img
+                    class="w-[80px] h-[80px]"
+                    src="https://emofly.b-cdn.net/hbd_exvhac6ayb3ZKT/width:1080/plain/https://storage.googleapis.com/takeapp/media/cmdf8mmew000l04ld8ani31mi.png"
+                    alt="Movie"
+                  />
+                </figure>
+
+                <div class="card-body size-10 grow-8 h-[150px]">
+                  <div class="flex flex-col gap-2">
+                    <h2 class="card-title">Bolso Rosa</h2>
+                    <p>$199 USD</p>
+                    <div class="flex justify-between items-center shadow-sm">
+                      <div class="p-3 text-2xl" onclick="">-</div>
+                      <input
+                        type="number"
+                        class="input validator w-[50px]"
+                        required
+                        value="1"
+                        min="1"
+                        max="10"
+                      />
+                      <div class="p-3 text-2xl" onclick="">+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card card-side bg-base-100 shadow-sm p-3">
+                <figure class="size-10 grow-2 h-[150px]">
+                  <img
+                    class="w-[80px] h-[80px]"
+                    src="https://emofly.b-cdn.net/hbd_exvhac6ayb3ZKT/width:1080/plain/https://storage.googleapis.com/takeapp/media/cmdf8mmew000l04ld8ani31mi.png"
+                    alt="Movie"
+                  />
+                </figure>
+
+                <div class="card-body size-10 grow-8 h-[150px]">
+                  <div class="flex flex-col gap-2">
+                    <h2 class="card-title">Bolso Rosa</h2>
+                    <p>$199 USD</p>
+                    <div class="flex justify-between items-center shadow-sm">
+                      <div class="p-3 text-2xl" onclick="">-</div>
+                      <input
+                        type="number"
+                        class="input validator w-[50px]"
+                        required
+                        value="1"
+                        min="1"
+                        max="10"
+                      />
+                      <div class="p-3 text-2xl" onclick="">+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card card-side bg-base-100 shadow-sm p-3">
+                <figure class="size-10 grow-2 h-[150px]">
+                  <img
+                    class="w-[80px] h-[80px]"
+                    src="https://emofly.b-cdn.net/hbd_exvhac6ayb3ZKT/width:1080/plain/https://storage.googleapis.com/takeapp/media/cmdf8mmew000l04ld8ani31mi.png"
+                    alt="Movie"
+                  />
+                </figure>
+
+                <div class="card-body size-10 grow-8 h-[150px]">
+                  <div class="flex flex-col gap-2">
+                    <h2 class="card-title">Bolso Rosa</h2>
+                    <p>$199 USD</p>
+                    <div class="flex justify-between items-center shadow-sm">
+                      <div class="p-3 text-2xl" onclick="">-</div>
+                      <input
+                        type="number"
+                        class="input validator w-[50px]"
+                        required
+                        value="1"
+                        min="1"
+                        max="10"
+                      />
+                      <div class="p-3 text-2xl" onclick="">+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="total-pedido">
+        <div class="p-5 shadow-lg rounded-box bg-base-200 mt-5">
+          <h2 class="text-lg font-bold">Resumen del pedido</h2>
+
+          <div class="flex justify-between items-center mt-3">
+            <p>Articulos (7)</p>
+            <span>$1999 USD</span>
+          </div>
+
+          <div class="flex justify-between items-center mt-3">
+            <p>Otros / Serivicio</p>
+            <span>0 USD</span>
+          </div>
+
+          <div class="flex justify-between items-center mt-3">
+            <p>Subtotal</p>
+            <span>$1999 USD</span>
+          </div>
+
+            <div class="flex justify-between items-center mt-3 border-t-2 border-base-300 pt-3">
+            <p class="font-bold">Total</p>
+            <span class="font-bold">$1999 USD</span>
+          </div>
+
+
+              <div class="flex justify-center mt-3">
+                <button
+                onclick="realizarPedidoWasap()"
+                class="btn btn-neutral w-full text-xl p-7 m-3 rounded-xl"
+                >
+                Realizar pedido
+                </button>
+
+        </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="footer footer-horizontal footer-center bg-base-200 text-base-content p-10"
+    >
+      <nav class="grid grid-flow-col gap-4">
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <div class="grid grid-flow-col gap-4">
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              ></path>
+            </svg>
+          </a>
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+              ></path>
+            </svg>
+          </a>
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <aside>
+        <p>
+          Copyright © {new Date().getFullYear()} - All right reserved by ACME
+          Industries Ltd
+        </p>
+      </aside>
+    </footer>
+
+    <script>
+      function openCart() {
+        document.querySelector("#my-drawer-carrito").checked = true;
+      }
+
+      function closeCart() {
+        document.querySelector("#my-drawer-carrito").checked = false;
+      }
+
+      function realizarPedidoWasap() {
+
+        // recopilar datos del formulario y enviar al API PEDIDOS DE BOLSOS FULL STACK
+
+        const mensaje = `Hola, quisiera realizar un pedido de los siguientes articulos: \n
+        - Bolso Rosa x 1 \n
+        Total: $1999 USD - Bolso Rosa x 1 \n
+        Total: $1999 USD
+         - Bolso Rosa x 1 \n
+        Total: $1999 USD
+         - Bolso Rosa x 1 \n
+        Total: $1999 USD`;
+        const numeroWhatsapp = "51936670597"; // Reemplaza con el número de WhatsApp deseado
+        const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
