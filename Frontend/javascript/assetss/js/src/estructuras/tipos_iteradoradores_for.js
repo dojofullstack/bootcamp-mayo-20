@@ -81,8 +81,6 @@ function obtenerInfoPokedex(nombrePokemon) {
 }
 
 
-
-
 // console.log("pokemones", pokemones);
 // pokemones.forEach(obtenerInfoPokedex);
 // console.log("Despues del forEach", pokeMap);
@@ -118,7 +116,6 @@ function obtenerInfoPokedex(nombrePokemon) {
 
 
 // ejemplo con map
-
 // console.log( pokemones.map(getPokemonImportantFields));
 //
 
@@ -163,3 +160,12 @@ console.log("Productos disponibles:", disponibles);
 const palabras = ["sol", "mariposa", "luz", "computadora", "aire"];
 const palabrasLargas = palabras.filter(palabra => palabra.length > 5);
 console.log("Palabras largas:", palabrasLargas); // ["mariposa", "computadora"]
+
+// EJEMPLO 5: Filtrar objetos por propiedad
+const personas = [
+  { nombre: "Ana", edad: 25 },
+  { nombre: "Luis", edad: 17 },
+  { nombre: "Carlos", edad: 30 }
+];
+const adultos = personas.filter(persona => persona.edad >= 18);
+console.log("Adultos:", adultos); // [{ nombre: "Ana", edad: 25 }, { nombre: "Carlos", edad: 30 }]

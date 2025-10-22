@@ -1,4 +1,17 @@
-
+/**
+ * MÓDULO: TIPOS DE DATOS Y OPERACIONES BÁSICAS EN JAVASCRIPT
+ * 
+ * Este módulo cubre los fundamentos de JavaScript incluyendo:
+ * - Tipos de datos primitivos (number, string, boolean, null, undefined)
+ * - Tipos de datos complejos (array, object)
+ * - Operaciones aritméticas básicas y abreviadas
+ * - Métodos comunes de strings y arrays
+ * - Manipulación de objetos y sus propiedades
+ * - Introducción a funciones básicas
+ * 
+ * Objetivo: Comprender el sistema de tipado dinámico de JavaScript
+ * y las operaciones fundamentales con cada tipo de dato.
+ */
 
 console.log("load main.js");
 

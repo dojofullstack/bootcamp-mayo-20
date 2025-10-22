@@ -1,7 +1,7 @@
 
 <!-- // temas pendientes JS -->
 -----------------------------------
-- Github Copilot AI
+- Github Copilot AI (Parcial)
 -----------------------------------------
 - Librerias Fecht, Axios, ChartJS, Payment paypal, stripe.
 - JSON (JSON Object Notation)
