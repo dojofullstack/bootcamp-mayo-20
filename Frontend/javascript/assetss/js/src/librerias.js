@@ -1,6 +1,6 @@
 
 // paquetes nativos de JS
-// paquetes de terceros (instalados via npm o yarn)
+// paquetes de terceros (instalados via npm y CDN)
 
 console.log("load libreias.js");
 
@@ -55,3 +55,134 @@ const nuevoProducto = {
 
 // JSON METODOS
 // JSON.stringify Y JSON.parse.
+
+const producto = {
+    id: 1,
+    title: "iPhone 9",
+    description: "An apple mobile which is nothing like apple",
+    price: 549,
+    brand: "Apple",
+    category: "smartphones"
+};
+
+
+console.log(JSON.stringify(producto)); // convierte objeto JS a JSON string
+
+// convierte JSON string a objeto JS
+const productoJSON = '{"id":1,"title":"iPhone 9","description":"An apple mobile which is nothing like apple","price":549,"brand":"Apple","category":"smartphones"}';
+
+console.log(JSON.parse(productoJSON));
+
+
+
+// paquetes de terceros axios
+
+// axios.get('https://dummyjson.com/products/1')
+//     .then(res => console.log(res.data))
+//     .catch(console.error);
+
+
+
+// const nuevoProductoPhone = {
+//     title: 'Samsung Galaxy S21',
+//     description: 'Latest Samsung flagship smartphone with advanced features',
+//     price: 799,
+//     brand: 'Samsung',
+//     category: 'smartphones'
+// };
+
+// axios.post('https://dummyjson.com/products/add', nuevoProductoPhone)
+//     .then(res => console.log("producto agregado", res.data))
+//     .catch(console.error);
+
+
+
+// axios.put('https://dummyjson.com/products/1', {
+//     title: 'iPhone Galaxy Dojo'
+// })
+//     .then(res => console.log("producto actualizado", res.data))
+//     .catch(console.error);
+
+
+
+
+// axios.delete('https://dummyjson.com/products/1')
+//     .then(res => console.log("producto eliminado", res.data))
+//     .catch(console.error);
+
+
+// libreria chartjs
+
+
+const ctx = document.getElementById('myChart');
+
+// new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'Pink'],
+//       datasets: [{
+//         label: '# of Votes',
+//         data: [12, 19, 3, 5, 2, 3, 7],
+//         borderWidth: 1
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         y: {
+//           beginAtZero: true
+//         }
+//       }
+//     }
+//   });
+
+const data = {
+  labels: [
+    'Red',
+    'Blue',
+    'Yellow'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [300, 50, 100],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
+
+const config = {
+  type: 'pie',
+  data: data,
+};
+
+
+
+new Chart(
+    ctx,
+    config
+)
+
+
+ window.paypalLoadScript({ clientId: "test" }).then((paypal) => {
+                paypal.Buttons(
+                    {
+                        createOrder: function (data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: '10'
+                                    }
+                                }]
+                            });
+                        },
+                        onApprove: function (data, actions) {
+                            return actions.order.capture().then(function (details) {
+                                alert('Transaction completed by ' + details.payer.name.given_name);
+                            });
+                        }
+                    }
+                 ).render("#paypal-buttons");
+            });

@@ -16,6 +16,10 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id=test"></script> -->
+
+    <script src="https://unpkg.com/@paypal/paypal-js@8.0.0/dist/iife/paypal-js.min.js"></script>
+
 
 </head>
 
@@ -47,6 +51,16 @@
         <div id="poke-container">
 
         </div>
+
+         <div id="paypal-buttons" style="max-width: 400px;"></div>
+
+        <div style="max-width: 300px;">
+              <canvas id="myChart"></canvas>
+
+        </div>
+
+
+
         
     </main>
     <footer>
@@ -68,6 +82,10 @@
         console.log("Hello, World!");
     </script>
 
+<script>
+    paypal.Buttons().render("body");
+</script>
+
     <!-- <script src="assetss/js/src/main.js"></script> -->
     <!-- <script src="assetss/js/src/estructuras/control_errores.js"></script> -->
     <!-- <script src="assetss/js/src/estructuras/operadores_logicos.js"></script> -->
@@ -79,6 +97,8 @@
     <!-- <script src="assetss/js/src/dom.js"></script> -->
     <!-- <script src="assetss/js/src/estructuras/tipos_iteradoradores_for.js"></script> -->
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.min.js"></script>
     <script src="assetss/js/src/librerias.js"></script>
 
 
