@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- Estilos de Stripe Payment -->
+    <link rel="stylesheet" href="assetss/css/stripe-payment.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         console.log("setup de google analytics");
@@ -20,6 +23,8 @@
 
     <script src="https://unpkg.com/@paypal/paypal-js@8.0.0/dist/iife/paypal-js.min.js"></script>
 
+    <!-- stripe cdn -->
+    <script src="https://js.stripe.com/v3/"></script>
 
 </head>
 
@@ -52,16 +57,32 @@
 
         </div>
 
-         <div id="paypal-buttons" style="max-width: 400px;"></div>
+        <div id="paypal-buttons" style="max-width: 400px;"></div>
 
         <div style="max-width: 300px;">
-              <canvas id="myChart"></canvas>
+            <canvas id="myChart"></canvas>
 
         </div>
 
 
 
-        
+
+
+        <div>
+            <button id="card-element"></button>
+        </div>
+
+
+
+        <a href="https://buy.stripe.com/test_8x26oBecx6b43dwbX2f3a00">
+            <button>
+                Pagar 10 usd
+            </button>
+
+        </a>
+
+
+
     </main>
     <footer>
         <p>Derechos reservados</p>
@@ -82,9 +103,12 @@
         console.log("Hello, World!");
     </script>
 
-<script>
+    <!-- <script>
     paypal.Buttons().render("body");
-</script>
+</script> -->
+
+    <!-- Script de Stripe Payment - Mejorado -->
+    <script src="assetss/js/src/stripe-payment.js"></script>
 
     <!-- <script src="assetss/js/src/main.js"></script> -->
     <!-- <script src="assetss/js/src/estructuras/control_errores.js"></script> -->
