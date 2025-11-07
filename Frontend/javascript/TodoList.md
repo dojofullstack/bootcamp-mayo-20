@@ -7,8 +7,7 @@
 - JSON (JSON Object Notation)
 - Memoria LocalStorage, Cookies
 - JS Asinconico
-- Proyecto Tienda Virtual para Whatsapp
 ------------------------------------------------------------------
-
 - Intro a ReactJS (JSX)
+- Proyecto Tienda Virtual para Whatsapp
 - Backend & Database & Cloud Services
