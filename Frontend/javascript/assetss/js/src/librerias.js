@@ -219,7 +219,7 @@ new Chart(
                         }
                     }
                  ).render("#paypal-buttons");
-            });
-
-
-
+            }).
+catch((err) => {
+    console.error("Error loading PayPal script:", err);
+});

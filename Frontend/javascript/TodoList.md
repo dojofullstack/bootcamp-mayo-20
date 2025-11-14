@@ -7,7 +7,7 @@
 - JSON (JSON Object Notation)
 - Memoria LocalStorage, Cookies
 - JS Asinconico
-------------------------------------------------------------------
+-------------------------------------------------
 - Intro a ReactJS (JSX)
 - Proyecto Tienda Virtual para Whatsapp
 - Backend & Database & Cloud Services
