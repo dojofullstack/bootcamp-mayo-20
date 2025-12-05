@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import useTakeApp from "../store";
+import { useNavigate } from "react-router-dom";
 
 const FormularioStore = () => {
+
+   const navigate = useNavigate()
   //   const [storeName, setStoreName] = useState('');
   //   const [phone, setPhone] = useState('+51');
   //   const [phoneNumber, setPhoneNumber] = useState('');
@@ -23,14 +26,14 @@ const FormularioStore = () => {
     const setSelectedColor = useTakeApp((state) => state.setSelectedColor);
     const setAvatarPreview = useTakeApp((state) => state.setAvatarPreview);
 
-  console.log({
-    storeName,
-    phone,
-    phoneNumber,
-    storeSlug,
-    selectedColor,
-    avatarPreview,
-  });
+  // console.log({
+  //   storeName,
+  //   phone,
+  //   phoneNumber,
+  //   storeSlug,
+  //   selectedColor,
+  //   avatarPreview,
+  // });
 
   const colors = [
     { name: "black", bg: "bg-gray-900" },
@@ -57,6 +60,27 @@ const FormularioStore = () => {
     const formatted = value.toLowerCase().replace(/\s+/g, "").trim();
     setStoreSlug(formatted);
   };
+
+
+  const saveDataStore = () => {
+    const data = {
+      storeName,
+      phone,
+      phoneNumber,
+      storeSlug,
+      selectedColor,
+      avatarPreview,
+    };
+
+    localStorage.setItem('storeName', JSON.stringify(data));
+
+    // enviar a una API o manejar el guardado de datos aquí
+    console.log("Datos de la tienda guardados:", data);
+
+
+    navigate('/create-product');
+   
+  }
 
   return (
     <div className="w-full max-w-md bg-white p-8 rounded-lg">
@@ -206,7 +230,8 @@ const FormularioStore = () => {
 
         {/* Botón Crear */}
         <button
-          type="submit"
+          type="button"
+          onClick={saveDataStore}
           className="mt-8 px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
         >
           Crear

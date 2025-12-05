@@ -1,5 +1,14 @@
 import { create } from 'zustand'
 
+
+const callbackColor = (set, color) => {
+    set({selectedColor: color})
+}
+
+const callbackStoreName = (set, name) => {
+    set({storeName: name})
+}
+
 const useTakeApp = create( (set, get) => (
     {
         storeName: '',
@@ -8,8 +17,8 @@ const useTakeApp = create( (set, get) => (
         storeSlug: '',
         selectedColor: 'cyan',
         avatarPreview: null,
-        setSelectedColor: (color) => set({selectedColor: color}),
-        setStoreName: (name) => set({storeName: name}),
+        setSelectedColor: (color) => callbackColor(set, color),
+        setStoreName: (name) => callbackStoreName(set, name),
         setPhone: (phone) => set({phone: phone}),
         setPhoneNumber: (number) => set({phoneNumber: number }),
         setStoreSlug: (slug) => set({storeSlug: slug}),

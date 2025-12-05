@@ -4,11 +4,17 @@ import useTakeApp from "../store";
 const PreviewStore = () => {
 
     const storeName = useTakeApp((state) => state.storeName);
-    const phone = useTakeApp((state) => state.phone);
-    const phoneNumber = useTakeApp((state) => state.phoneNumber);
-    const storeSlug = useTakeApp((state) => state.storeSlug);
+    // const phone = useTakeApp((state) => state.phone);
+    // const phoneNumber = useTakeApp((state) => state.phoneNumber);
+    // const storeSlug = useTakeApp((state) => state.storeSlug);
     const selectedColor = useTakeApp((state) => state.selectedColor);
-    const avatarPreview = useTakeApp((state) => state.avatarPreview);
+    // const avatarPreview = useTakeApp((state) => state.avatarPreview);
+
+    console.log({
+        storeName,
+        selectedColor,
+        // avatarPreview,
+    });
 
 
     return (
@@ -34,8 +40,8 @@ const PreviewStore = () => {
 
             {/* Hero section con logo circular */}
             <div className="bg-gradient-to-b from-pink-100 to-white py-8 flex flex-col items-center" >
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-center px-4 mb-4"
-                style={{
+                <div className="w-24 h-24 rounded-full flex items-center justify-center text-white font-bold text-center px-4 mb-4"
+                    style={{
                     backgroundColor: selectedColor
             }}
             >
