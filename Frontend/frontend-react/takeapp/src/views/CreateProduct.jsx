@@ -1,8 +1,15 @@
 import { useState } from "react";
 import Header from "../components/Header";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export const CreateProduct = () => {
+
+  const navigate = useNavigate()
+
+
   const [title, setTitle] = useState("");
   const [type, setType] = useState("Físico");
   const [category, setCategory] = useState("");
@@ -39,8 +46,44 @@ export const CreateProduct = () => {
 
     console.log("Product data to be saved:", productData);
 
-    localStorage.setItem("productData", JSON.stringify(productData));
+    // localStorage.setItem("productData", JSON.stringify(productData));
     // Aquí puedes agregar la lógica para enviar los datos al servidor o almacenarlos según sea necesario.
+
+    axios.post("https://dummyjson.com/products/add", productData).then((response) => {
+        console.log("Product saved successfully:", response.data);
+        toast.success('El producto se ha creado correctamente', {
+position: "bottom-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+// transition: Bounce,
+});
+
+      setTimeout(() => {
+        navigate("/productos");
+      }, 3000);
+
+
+    }).catch((error) => {
+        console.error("Error saving product:", error);
+
+        toast.error('🦄 Wow so easy!', {
+position: "bottom-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+// transition: Bounce,
+});
+    });
+
   }
 
   return (
@@ -253,6 +296,21 @@ export const CreateProduct = () => {
           </div>
         </form>
       </div>
+
+     <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+// transition={Bounce}
+/>
+
     </>
   );
 };

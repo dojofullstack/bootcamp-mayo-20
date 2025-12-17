@@ -4,6 +4,8 @@ import "./index.css";
 import CreateStoreView from "./views/CreateStoreView";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CreateProduct } from "./views/CreateProduct";
+import { ProductsView } from "./views/ProductsView";
+import { ProductDetailView } from "./views/ProductDetailView";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -12,7 +14,8 @@ createRoot(document.getElementById("root")).render(
         {/* Define individual routes */}
         <Route path="/" element={<CreateStoreView />} />
         <Route path="/create-product" element={<CreateProduct />} />
-        <Route path="/product/:id" element={<CreateProduct />} /> 
+        <Route path="/product/:id" element={<ProductDetailView />} />
+        <Route path="/productos" element={<ProductsView />} /> 
   
 
         {/* <Route path="/registro" element={<CreateStoreView />} />
